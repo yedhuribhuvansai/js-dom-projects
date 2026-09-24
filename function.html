@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .css-title{
+            font-size: large;
+            font-weight: bold;
+        }
+        .move-button{
+            background-color: transparent;
+            border: 3px solid white;
+             height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+        }
+        .css-icon{
+            height: 50px;
+        }
+        .css-rock{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+            background-color: black;
+            color: white;
+        
+        }
+        .css-paper{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+            background-color: black;
+            color: white;
+            margin-left: 15px;
+        }
+         .css-scissor{
+               height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+            background-color: black;
+            color: white; 
+            margin-left: 15px; 
+            }
+            .css-reset{
+                padding: 10px 10px 10px 10px ;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .score{
+                margin: 50px;
+            }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper and scissor game</title>
+</head>
+<body>
+    <p class="css-title">Rock Paper & Scissor</p>
+    <button onclick="playGame('rock');" class="move-button css-rock"><img src="rock-emoji.png" alt="Rock" class="css-icon"></button>
+
+     <button onclick="playGame('paper');" class=" move-button css-paper"><img src="paper-emoji.png" alt="Paper" class="css-icon"></button>
+
+      <button onclick="playGame('scissor');" class=" move-button css-scissor
+      " ><img src="scissor-emoji.png" alt="Scissor" class="css-icon"></button>
+
+      <p class="js-result" score></p>
+      <p class="js-moves" score></p>
+       <p  class="js-score" score></p>
+      <button onclick="
+      score.win=0;
+      score.losses=0;
+      score.ties=0;
+      localStorage.removeItem('score');
+      updateScore();
+      " class="css-reset">Reset score</button>
+    <script src="function.js">      
+    </script>
+</body>
+</html>
